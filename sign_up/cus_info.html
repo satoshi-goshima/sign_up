@@ -1,0 +1,403 @@
+
+<!doctype html>
+<html>
+	
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<meta http-equiv="content-language" content="ja">
+<meta name="format-detection" content="telephone=no"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+<link rel="stylesheet" href="css/cus_style.css">
+
+<title>新規会員登録 | G's MATCHING
+</title>
+<meta name="description" content="イベント主催者と開催場所提供者マッチングサイトの新規会員登録ページです。" />
+<meta name="keywords" content="新規会員登録" />
+<meta name="author" content="G's MATCHING" />
+
+<style type="text/css">
+
+input.input_error {
+background-color: rgba(245, 177, 170, 0.7);
+}
+
+</style>
+
+</head>
+
+<body id="member">
+<header>
+<div id="header_member">
+    <div id="h_logo">
+        <p><span id="title_font">G's</span> <span>MATCHING</span></p>
+    </div>
+</div>
+</header>
+
+<div id="contents">
+	<div class="inner_box">
+		<div id="member_title">
+			<div class="title_bar"><h1><span>MEMBER<span>新規会員登録</span></span></h1></div>
+			<!-- <div class="step new_step">
+				<ul>
+					<li class="br_ac"><span>お客様</span>情報入力</li>
+					<li class="br_sec"><span>入力</span>内容<span>の</span>確認</li>
+					<li class="br_sec">登録完了</li>
+					<li class="br_sec letter-sp-2"><span>メールアドレス認証</span>コード入力</li>
+					<li><span>メールアドレス</span>認証完了</li>
+				</ul>
+			</div> -->
+		</div>
+
+		<div id="contents_box">
+			<div class="member_inbox">
+				<h2>お客様情報を入力</h2>
+				<div class="member_contents new_input">
+					<div name="member_regist_conf" action="#" method="post">
+						<!--メールアドレス-->
+						<div class="e_mail_add">
+							<div class="member_in">メールアドレス<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<div class="member_input_txt"><input type="email" name="input_mail_address" id="e_mail_s" value="" maxlength="60" /></div>
+									
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--パスワード-->
+						<div class="member_input_plural">
+							<div class="member_in">パスワード<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<div class="member_input_txt member_in_ss"><input type="password" name="input_login_password" id="pass_s" value="" maxlength="32" /></div><span class="form_attend_co">半角英数6～32文字</span>
+									
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="member_in">パスワード再入力<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<div class="member_input_txt member_in_ss"><input type="password" name="input_login_retype_password" id="pass_r_s" value="" maxlength="32" /></div><span class="form_attend_co">半角英数6～32文字</span>
+									<input type="hidden" name="input_login_id" value="use_mail_address" />
+									<input name="input_nickname" value="" type="hidden" />
+									<input name="input_twitter_account" value="" type="hidden" />
+								<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--お名前（漢字）-->
+						<div class="status">
+							<div class="member_in">お名前<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<div class="m_area_s">
+										<p>姓</p>
+										<div class="member_input_txt_s"><input type="text" name="input_family_name" id="sei_s" value="" maxlength="50" id="input_family_name" /></div>
+									</div>
+									<div class="m_area_s">
+										<p>名</p>
+										<div class="member_input_txt_s"><input type="text" name="input_given_name" id="mei_s" value="" maxlength="50" id="input_given_name" /></div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--お名前（フリガナ）-->
+						<div class="status">
+							<div class="member_in">フリガナ<span class="required">必須</span><span class="f_at_o">全角カタカナ</span></div>                                
+							<div class="member_r">
+								<div class="member_input">
+									<div class="m_area_s">
+										<p>セイ</p>
+										<div class="member_input_txt_s"><input type="text" name="input_family_name_kana" id="sei_huri_s" value="" maxlength="50" id="input_family_name_kana" /></div>
+										
+									</div>
+									<div class="m_area_s">
+										<p>メイ</p>
+										<div class="member_input_txt_s"><input type="text" name="input_given_name_kana" id="mei_huri_s" value="" maxlength="50" id="input_given_name_kana" /></div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--生年月日-->
+						<div class="status">
+							<div class="member_in">生年月日<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input m_birth">
+									<div class="member_input_txt_t"><input type="tel" name="input_birth_day_yyyy" id="year_s" value="" maxlength="4" /></div><span class="member_input_date">年</span>
+									<div class="member_input_txt_t"><input type="tel" name="input_birth_day_mm" id="month_s" value="" maxlength="2" /></div><span class="member_input_date">月</span>
+									<div class="member_input_txt_t"><input type="tel" name="input_birth_day_dd" id="day_s" value="" maxlength="2" /></div><span class="member_input_date">日</span>
+									<span class="form_attend_co">（半角数字 西暦 例：1990年 01月 01日）</span>
+								</div>
+								<div class="clear"></div>
+								
+								
+								
+								
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--性別-->
+						<div class="status">
+							<div class="member_in">性別<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<p class="member_txt">
+									<input name="input_sex_code" value="1" type="radio" id="sex00"/><label for="sex00">男性</label>　　　　
+									<input name="input_sex_code" value="2" type="radio" id="sex01"/><label for="sex01">女性</label>
+									</p>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--住所-->
+						<div class="member_input_plural">
+							<div class="member_in">住所<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<p>郵便番号</p>
+									<div class="member_input_txt_s">
+										<input type="tel" name="input_zip_code" id="address01_s" value="" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','input_address_1_code','input_address_2');" />
+									</div>
+									<span class="form_attend_co">（例：1111111　半角数字ハイフン無し）</span>
+								</div>
+								<div class="clear"></div>
+								<!--都道府県-->
+								<div class="member_input">
+									<p>都道府県</p>
+									<label for="member_input_select" class="member_select-group">
+										<select name="input_address_1_code" id="member_input_select">
+											<option value="1">北海道</option>
+											<option value="2">青森県</option>
+											<option value="3">岩手県</option>
+											<option value="4">宮城県</option>
+											<option value="5">秋田県</option>
+											<option value="6">山形県</option>
+											<option value="7">福島県</option>
+											<option value="8">茨城県</option>
+											<option value="9">栃木県</option>
+											<option value="10">群馬県</option>
+											<option value="11">埼玉県</option>
+											<option value="12">千葉県</option>
+											<option value="13">東京都</option>
+											<option value="14">神奈川県</option>
+											<option value="15">新潟県</option>
+											<option value="16">富山県</option>
+											<option value="17">石川県</option>
+											<option value="18">福井県</option>
+											<option value="19">山梨県</option>
+											<option value="20">長野県</option>
+											<option value="21">岐阜県</option>
+											<option value="22">静岡県</option>
+											<option value="23">愛知県</option>
+											<option value="24">三重県</option>
+											<option value="25">滋賀県</option>
+											<option value="26">京都府</option>
+											<option value="27">大阪府</option>
+											<option value="28">兵庫県</option>
+											<option value="29">奈良県</option>
+											<option value="30">和歌山県</option>
+											<option value="31">鳥取県</option>
+											<option value="32">島根県</option>
+											<option value="33">岡山県</option>
+											<option value="34">広島県</option>
+											<option value="35">山口県</option>
+											<option value="36">徳島県</option>
+											<option value="37">香川県</option>
+											<option value="38">愛媛県</option>
+											<option value="39">高知県</option>
+											<option value="40">福岡県</option>
+											<option value="41">佐賀県</option>
+											<option value="42">長崎県</option>
+											<option value="43">熊本県</option>
+											<option value="44">大分県</option>
+											<option value="45">宮崎県</option>
+											<option value="46">鹿児島県</option>
+											<option value="47">沖縄県</option>
+										</label>
+									</select>
+								</div>
+								<div class="clear"></div>
+								<!--市区町村-->
+								<div class="member_input">
+									<p>市区町村</p>
+									<div class="member_input_txt"><input type="text" name="input_address_2" id="address03_s" value="" maxlength="50" /></div>
+								</div>
+								<div class="clear"></div>
+								<!--以降の住所-->
+								<div class="member_input">
+									<p>以降の住所</p>
+									<div class="member_input_txt"><input type="text" name="input_address_3" id="address04_s" value="" maxlength="50" /></div>
+									
+								</div>
+								<div class="clear"></div>
+								<!--建物名-->
+								<div class="member_input">
+									<p>建物名等</p>
+									<div class="member_input_txt"><input type="text" name="input_address_4" id="address05_s" value="" maxlength="50" /></div>
+									
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--電話番号-->
+						<div class="status">
+							<div class="member_in">電話番号<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<div class="member_input_txt_s"><input type="tel" name="input_tel_no" id="tel_s" value="" maxlength="32" /></div>
+									
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--メルマガ-->
+						<div class="status">
+							<div class="member_in">メールマガジン</div>
+							<div class="member_r">
+								<div class="member_input">
+									<p class="member_txt">
+										<input name="input_mail_magazine_code" id="magazine_s" value="0" type="checkbox"/>
+										<label for="magazine_s">登録を希望しない場合はチェックを入れてください</label>
+									</p>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<!--会員規約・サービス利用規約-->
+						<div>
+							<div class="member_in">会員規約・サービス利用規約<span class="required">必須</span></div>
+							<div class="member_r">
+								<div class="member_input">
+									<p class="member_txt">会員登録を続ける場合は、『
+										<a href="img/kaiin_kiyaku.jpg" target="_blank" class="bold">会員規約</a>
+										』及び『
+										<a href="img/riyou_kiyaku.jpg" target="_blank" class="bold">サービス利用規約</a>
+										』をお読みいただき、同意の上、確認画面へ進んで下さい。<br />
+										ご登録頂きました個人情報については、商品の配送や各種メールマガジンの配信、お問い合わせの対応に利用させていただきます。</p>
+									<p class="member_txt">
+										<input type="radio" name="input_agreement_code" id="agree00_s" value="1"/>
+										<label for="agree00_s">同意する</label>　　　　
+										<input type="radio" name="input_agreement_code" id="agree01_s" value="0" checked="checked"/>
+										<label for="agree01_s">同意しない</label>
+									</p>
+							</div>
+							</div>	
+							<div class="clear"></div>
+						</div>
+						<div class="ul_class">
+							<ul>
+								<li class="li_class" id="save">登録</li>
+								<li class="li_class" id="clear">入力をクリア</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+</div>
+
+<footer>
+<p class="pagetop"><a href="#"></a></p>
+
+    <div class="ft_b">
+        <div class="inner_box">
+            <ul>
+                <li>株式会社すこし・ふしぎ・倶楽部　月音水琴監修委員会許可　第540310480618号</li>                
+                <li class="f_copy">G's MATCHING</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$("#save").on("click",function(){
+        const data ={
+        e_mail:$("#e_mail_s").val(),
+        pass:$("#pass_s").val(),
+        pass_r:$("#pass_r_s").val(),
+        sei:$("#sei_s").val(),
+        mei:$("#mei_s").val(),
+        sei_huri:$("#sei_huri_s").val(),
+        mei_huri:$("#mei_huri_s").val(),
+        year:$("#year_s").val(),
+        month:$("#month_s").val(),
+        day:$("#day_s").val(),
+        sex00:$("#sex00").val(),
+        sex01:$("#sex01").val(),
+        address01:$("#address01_s").val(),
+        address02:$("#member_input_select").val(),
+        address03:$("#address03_s").val(),
+        address04:$("#address04_s").val(),
+        address05:$("#address05_s").val(),
+        tel:$("#tel_s").val(),
+        magazine:$("#magazine_s").val(),
+        agree00:$("#agree00_s").val(),
+        agree01:$("#agree01_s").val(),
+        }
+    console.log(data);
+    const jsonData = JSON.stringify(data);
+    console.log(jsonData);
+    localStorage.setItem("memo",jsonData)
+    });
+
+    //2.clear クリックイベント
+    $("#clear").on("click",function(){
+    localStorage.removeItem("memo");
+    $("#text_area,input").val("");
+    })
+
+    //3.ページ読み込み：保存データ取得表示
+    if(localStorage.getItem("memo")){
+    const jsonText = localStorage.getItem("memo");
+    console.log(jsonText);
+    const text = JSON.parse(jsonText)
+    console.log(text);
+    $("#e_mail_s").val(text.e_mail);
+    $("#pass_s").val(text.pass);
+    $("#pass_r_s").val(text.pass_r);
+    $("#sei_s").val(text.sei);
+    $("#mei_s").val(text.mei);
+    $("#sei_huri_s").val(text.sei_huri);
+    $("#mei_huri_s").val(text.mei_huri);
+    $("#year_s").val(text.year);
+    $("#month_s").val(text.month);
+    $("#day_s").val(text.day);
+    $("#sex00").val(text.sex00);
+    $("#sex01").val(text.sex01);
+    $("#address01_s").val(text.address01);
+    $("#member_input_select").val(text.member_input_select);
+    $("#address03_s").val(text.address03);
+    $("#address04_s").val(text.address04);
+    $("#address05_s").val(text.address05);
+    $("#tel_s").val(text.tel);
+    $("#magazine_s").val(text.magazine);
+    $("#agree00_s").val(text.agree00);
+    $("#agree01_s").val(text.agree01);
+    }
+
+</script>
+
+</body>
+</html>
+
+<!-- 課題１：都道府県をデフォルトで北海道に -->
+<!-- 課題２：チェックボックス、ラジオボタンの値をlocalstorageに保存 -->
+
+<!-- 参考サイト https://store.tsite.jp/member/member_regist_input.html -->
